@@ -156,7 +156,7 @@ print('Training accuracy: {}'.format(_accuracy(Y_train_pred, Y_train)))
 ## Predicting testing labels
 # Predict testing labels
 predictions = 1 - _predict(X_test, w, b)
-with open(output_fpath.format('generative'), 'w') as f:
+with open(output_fpath, 'w') as f:
     f.write('id,label\n')
     for i, label in  enumerate(predictions):
         f.write('{},{}\n'.format(i, label))
